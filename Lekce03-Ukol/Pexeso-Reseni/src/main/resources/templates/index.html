@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet"
+          href="../static/css/styles.css"
+          th:href="${'css/styles.css'}"/>
+    <link rel="icon"
+          href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Pexeso</title>
+</head>
+<body>
+
+    <h1>Pexeso</h1>
+
+    <div class="rozcestnik">
+        <a th:href="${'stul.html'}" href="stul.html">
+            Rozdané kartičky pexesa</a>
+
+        <a th:href="${'hraci.html'}" href="hraci.html">
+            Seznam největších přeborníků
+        </a>
+    </div>
+
+</body>
+</html>

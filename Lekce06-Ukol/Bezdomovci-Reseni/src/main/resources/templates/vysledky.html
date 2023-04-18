@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Bezdomovci</title>
+</head>
+<body>
+    <!--/*@thymesVar id="score" type="java.lang.Integer"*/-->
+
+    <h1>Bezdomovci</h1>
+
+    <h2>Výsledky</h2>
+
+    <h3>Vaše skóre je <span th:text="${score}">8</span> z 8.</h3>
+
+</body>
+</html>

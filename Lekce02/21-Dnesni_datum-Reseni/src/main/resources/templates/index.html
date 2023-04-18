@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet"
+          href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon"
+          href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Výchozí webová stránka | Java 2</title>
+</head>
+<body>
+    <!--/*@thymesVar id="aktualniCas" type="java.time.LocalTime"*/-->
+    <!--/*@thymesVar id="dnesniDatum" type="java.time.LocalDate"*/-->
+
+    <div class="page">
+
+        <h1>Java 2</h1>
+
+        <p>Dneska je <span th:text="${dnesniDatum}">1. 1. 2018</span></p>
+        <p>Dneska je <span th:text="${#strings.toLowerCase(#temporals.format(dnesniDatum, 'EEEE'))}">čtvrtek</span></p>
+        <p>Aktuální čas: <span th:text="${#temporals.format(aktualniCas, 'H:mm:ss')}">3:05:20</span></p>
+
+    </div>
+</body>
+</html>

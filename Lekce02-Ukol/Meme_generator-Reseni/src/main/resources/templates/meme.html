@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head><title>Meme</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet"
+          href="../static/css/bootstrap.min.css"
+          th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet"
+          href="../static/css/meme.css"
+          th:href="@{/css/meme.css}"/>
+</head>
+<body class="container">
+    <div class="stred">
+        <h1>Generátor vtipu</h1>
+        <div class="obr-text">
+            <img src="../static/images/obr4.jpg"
+                 th:src="@{|/images/${obrazek}|}"
+                 class="img" alt="Obrázek"/>
+            <p>
+                <i th:text="${vyrok}"></i>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

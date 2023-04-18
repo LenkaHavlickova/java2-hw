@@ -1,0 +1,53 @@
+﻿<h1>The customer</h1>
+<form role="form" name="myForm">
+    <table>
+        <tr>
+            <th>
+                <label for="id">Number</label>
+            </th>
+            <td>
+                <span id="id">{{customer.id}}</span>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="firstName" ng-class="{error: myForm.name.$invalid}">First Name</label>
+            </th>
+            <td>
+                <input id="firstName" name="firstName" ng-model="customer.firstName" type="text"
+                       placeholder="Your first name" required/>
+                <span ng-show="myForm.firstName.$dirty && myForm.firstName.$invalid">First Name Required</span>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="lastName">Last Name</label></th>
+            <td>
+                <input id="lastName"
+                       name="lastName" ng-model="customer.lastName" type="text"
+                       placeholder="Your last name" required/>
+                <span ng-show="myForm.lastName.$dirty && myForm.lastName.$invalid">
+                Last Name Required</span>
+            </td>
+        </tr>
+        <tr>
+            <th><label for="address">Address</label></th>
+            <td>
+                <input id="address"
+                       ng-model="customer.address" type="text"
+                       placeholder="Present Address"/>
+            </td>
+        </tr>
+        <tr>
+            <th>&nbsp;</th>
+            <td>
+                <button ng-click="saveCustomer(customer);"
+                        ng-disabled="isClean() || myForm.$invalid">
+                    {{buttonText}}
+                </button>
+                &nbsp;
+                &nbsp;
+                <a href="#/">Cancel</a>
+            </td>
+        </tr>
+    </table>
+</form>

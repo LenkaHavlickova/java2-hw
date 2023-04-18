@@ -1,0 +1,67 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Deploy to Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat" ALTERNATIVE_JRE_ENABLED="false">
+    <option name="LOCAL" value="false" />
+    <option name="UPDATING_POLICY" value="hot-swap-classes" />
+    <deployment>
+      <artifact name="java-module:war">
+        <settings>
+          <option name="CONTEXT_PATH" value="/VideoBoss" />
+        </settings>
+      </artifact>
+    </deployment>
+    <server-settings>
+      <data>
+        <option name="targets">
+          <list>
+            <WatchedTargetModelImpl>
+              <option name="name" value="CONTEXT_XML" />
+              <option name="transportStagingTarget">
+                <TransportTarget>
+                  <option name="id" value="3ea59142-a2ff-4019-a120-207490ebf6a6" />
+                  <id>3ea59142-a2ff-4019-a120-207490ebf6a6</id>
+                </TransportTarget>
+              </option>
+              <option name="watchedLocalPath" value="" />
+              <watched-path />
+              <name>CONTEXT_XML</name>
+              <transport-target>
+                <TransportTarget>
+                  <option name="id" value="3ea59142-a2ff-4019-a120-207490ebf6a6" />
+                  <id>3ea59142-a2ff-4019-a120-207490ebf6a6</id>
+                </TransportTarget>
+              </transport-target>
+            </WatchedTargetModelImpl>
+            <StagingTargetModelImpl>
+              <option name="name" value="STAGING" />
+              <option name="stagingRemotePath" value="" />
+              <option name="transportStagingTarget">
+                <TransportTarget>
+                  <option name="id" value="0311243d-bb0a-4907-bdd7-d99b27114967" />
+                  <id>0311243d-bb0a-4907-bdd7-d99b27114967</id>
+                </TransportTarget>
+              </option>
+              <staging-path />
+              <name>STAGING</name>
+              <transport-target>
+                <TransportTarget>
+                  <option name="id" value="0311243d-bb0a-4907-bdd7-d99b27114967" />
+                  <id>0311243d-bb0a-4907-bdd7-d99b27114967</id>
+                </TransportTarget>
+              </transport-target>
+            </StagingTargetModelImpl>
+          </list>
+        </option>
+      </data>
+    </server-settings>
+    <predefined_log_file id="Tomcat" enabled="true" />
+    <predefined_log_file id="TOMCAT_LOCALHOST_LOG_ID" enabled="true" />
+    <RunnerSettings RunnerId="Debug">
+      <option name="DEBUG_PORT" value="8000" />
+      <option name="LOCAL" value="false" />
+    </RunnerSettings>
+    <method v="2">
+      <option name="Make" enabled="true" />
+      <option name="BuildArtifacts" enabled="true" />
+    </method>
+  </configuration>
+</component>

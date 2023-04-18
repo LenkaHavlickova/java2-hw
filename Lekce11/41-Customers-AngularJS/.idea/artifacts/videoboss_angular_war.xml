@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="videoboss-angular:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>videoboss-angular</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="videoboss-angular.war">
+      <element id="artifact" artifact-name="videoboss-angular:war exploded" />
+    </root>
+  </artifact>
+</component>

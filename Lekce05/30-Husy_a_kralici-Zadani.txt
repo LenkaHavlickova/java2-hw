@@ -1,0 +1,4 @@
+Úkolem je naprogramovat starou známou aplikaci na evidenci hus a králíků.
+
+Uživatel zadá počet hus a počet králíků.
+Aplikace mu na výsledné stránce zobrazí celkový počet hlav a nohou na farmě.

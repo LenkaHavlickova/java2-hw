@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Výchozí webová stránka | Java 2</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Java 2</h1>
+
+        <p>Ahoj, zdraví <span th:text="${mojeJmeno}">JMENO</span></p>
+
+        <p th:text="${mujVek}">Tady bude muj vek</p>
+
+        <p>Dneska se cítím na <span th:text="${nahodnaHodnota}">4</span> %</p>
+
+        <p>Na kostce padlo
+            <span th:text="${cisloKostky}">4</span>
+        </p>
+
+        <p>
+            <img th:src="${odkazNaObrazekKostky}" alt="Obrázek kostky">
+        </p>
+
+    </div>
+</body>
+</html>

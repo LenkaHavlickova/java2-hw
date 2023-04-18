@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Výsledek</title>
+</head>
+<body>
+    <!--/*@thymesVar id="plus" type="java.lang.Double"*/-->
+    <!--/*@thymesVar id="minus" type="java.lang.Double"*/-->
+    <!--/*@thymesVar id="krat" type="java.lang.Double"*/-->
+    <!--/*@thymesVar id="deleno" type="java.lang.Double"*/-->
+    <!--/*@thymesVar id="mocnina" type="java.lang.Double"*/-->
+    <!--/*@thymesVar id="odmocnina" type="java.lang.Double"*/-->
+    <!--/*@thymesVar id="cislo1" type="java.lang.Double"*/-->
+    <!--/*@thymesVar id="cislo2" type="java.lang.Double"*/-->
+
+    <div class="page">
+
+        <h1>Aritmetika</h1>
+    
+        <p>Zadali jste čísla:
+            <span th:text="${cislo1}">123</span>,
+            <span th:text="${cislo2}">456</span>
+        </p>
+
+        <table>
+            <tr>
+                <td th:text="${cislo1}">100</td>
+                <td>+</td>
+                <td th:text="${cislo2}">200</td>
+                <td>=</td>
+                <td th:text="${plus}">300</td>
+            </tr>
+            <tr>
+                <td th:text="${cislo1}">100</td>
+                <td>-</td>
+                <td th:text="${cislo2}">200</td>
+                <td>=</td>
+                <td th:text="${minus}">300</td>
+            </tr>
+            <tr>
+                <td th:text="${cislo1}">100</td>
+                <td>*</td>
+                <td th:text="${cislo2}">200</td>
+                <td>=</td>
+                <td th:text="${krat}">300</td>
+            </tr>
+            <tr>
+                <td th:text="${cislo1}">100</td>
+                <td>:</td>
+                <td th:text="${cislo2}">200</td>
+                <td>=</td>
+                <td th:text="${deleno}">300</td>
+            </tr>
+            <tr>
+                <td th:text="${cislo1}">100</td>
+                <td>na</td>
+                <td th:text="${cislo2}">200</td>
+                <td>=</td>
+                <td th:text="${mocnina}">300</td>
+            </tr>
+            <tr>
+                <td th:text="${cislo1}">100</td>
+                <td>odmocněno</td>
+                <td th:text="${cislo2}">200</td>
+                <td>=</td>
+                <td th:text="${odmocnina}">300</td>
+            </tr>
+        </table>
+
+        <p>
+            <a href=".">Zpět</a>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet"
+          href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Nákupní seznam</title>
+</head>
+<body>
+    <!--/*@thymesVar id="seznamVyrobku"
+        type="java.util.List<cz.czechitas.webapp.Zbozi>"*/-->
+
+    <div class="page">
+
+        <h1>Nákupní seznam</h1>
+
+        <table>
+            <tr th:each="vec, cislo : ${seznamVyrobku}">
+                <td th:text="${cislo.index + 1 + '.'}">1.</td>
+                <td th:text="${vec.nazev}">Mrkev</td>
+                <td th:text="${vec.mnozstvi}">Mrkev</td>
+            </tr>
+            <tr th:remove="all">
+                <td>2.</td>
+                <td>Brokolice</td>
+                <td>3</td>
+            </tr>
+            <tr th:remove="all">
+                <td>3.</td>
+                <td>Květák</td>
+                <td>1</td>
+            </tr>
+        </table>
+
+        <a href="novy.html">Přidat</a>
+
+    </div>
+</body>
+</html>

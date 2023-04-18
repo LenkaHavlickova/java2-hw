@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Seznam zákazníků</title>
+</head>
+<body>
+    <!--/*@thymesVar id="seznamZakazniku" type="java.util.List<cz.czechitas.webapp.Customer>"*/-->
+
+    <div class="page">
+
+        <h1>Java 2</h1>
+
+        <table>
+            <tr th:each="zakaznik : ${seznamZakazniku}">
+                <td th:text="${zakaznik.firstName}">Karel</td>
+                <td th:text="${zakaznik.lastName}">Dvořák</td>
+                <td th:text="${zakaznik.address}">Praha</td>
+            </tr>
+            <tr th:remove="all">
+                <td>Jan</td>
+                <td>Veselý</td>
+                <td>Brno</td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>

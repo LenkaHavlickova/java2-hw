@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Seznam kamarádů</title>
+</head>
+<body>
+    <!--/*@thymesVar id="lide" type="java.util.List<cz.czechitas.webapp.Clovek>"*/-->
+
+    <h1>Moji kamarádi</h1>
+
+    <table>
+        <tr th:each="pritel : ${lide}">
+            <td th:text="${pritel.krestniJmeno}">Jack</td>
+            <td th:text="${pritel.prijmeni}">Sparrow</td>
+        </tr>
+    </table>
+
+</body>
+</html>

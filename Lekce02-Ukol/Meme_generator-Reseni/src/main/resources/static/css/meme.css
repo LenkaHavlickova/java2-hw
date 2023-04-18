@@ -1,0 +1,30 @@
+body {
+    text-align: center;
+    background-color: #a5d1d2;
+}
+
+.stred {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+h1 {
+    font-family: "Arial Black", sans-serif;
+    font-variant: all-small-caps;
+}
+
+.obr-text {
+    background-color: black;
+    text-align: center;
+}
+
+img {
+    padding: 2%;
+}
+
+p {
+    color: #a5d1d2;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+}

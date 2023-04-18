@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>VideoBoss</title>
+    <link rel="stylesheet" type="text/css"
+          href="../../static/css/style.css"
+          th:href="@{/css/style.css}"/>
+</head>
+<body>
+    <!--/*@thymesVar id="customers" type="java.util.List<net.sevecek.videoboss.entity.Customer>"*/-->
+
+    <h1>Customers</h1>
+
+    <h4>
+        <a href="edit.html"
+           th:href="@{/customers/new.html}"
+           class="actionButtonLink">
+            Add a customer
+        </a>
+    </h4>
+
+    <table>
+        <tr>
+            <th>Number</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+
+        <tr th:each="customer : ${customers}">
+            <td th:text="${customer.id}">1000</td>
+            <td th:text="${customer.firstName}">Jack</td>
+            <td th:text="${customer.lastName}">Sparrow</td>
+            <td th:text="${customer.address}">Port Royale</td>
+            <td>
+                <a href="edit.html"
+                   th:href="@{|/customers/${customer.id}.html|}"
+                   class="actionButtonLink">Edit</a>
+
+                <form th:action="@{|/customers/${customer.id}/${customer.version}|}"
+                      method="post"
+                      class="actionButtonForm">
+                    <input type="hidden" name="_method" value="delete"/>
+                    <input type="submit" value="Remove"/>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

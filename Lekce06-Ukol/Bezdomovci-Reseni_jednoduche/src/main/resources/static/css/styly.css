@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.item {
+    width: 300px;
+    margin: 20px auto;
+    border: 3px solid black;
+    
+}
+
+.item img {
+    width: 100%;
+    padding: 5px;
+    display: block;
+}
+
+
+.radiobuttons {
+    padding: 10px;
+    text-align: center;
+}
+
+.radiobuttons input {
+    margin-left: 20px;
+}
+
+.submit {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.submit input {
+    width: 100%;
+}

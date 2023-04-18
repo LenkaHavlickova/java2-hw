@@ -1,0 +1,30 @@
+<div>
+    <h3>
+        <a href="#/customers/new">Add a customer</a>
+    </h3>
+
+    <table>
+
+        <tr>
+            <th>Number</th>
+            <th>First Name&nbsp;</th>
+            <th>Last Name&nbsp;</th>
+            <th>Address&nbsp;</th>
+            <th>Action&nbsp;</th>
+        </tr>
+        <tr ng-repeat="item in customers">
+            <td>{{item.id}}</td>
+            <td>{{item.firstName}}</td>
+            <td>{{item.lastName}}</td>
+            <td>{{item.address}}</td>
+            <td><a href="#/customers/{{item.id}}">Edit</a></td>
+        </tr>
+
+    </table>
+
+    <div ng-show="customers.length == 0">
+
+        <h4>No customers found</h4>
+
+    </div>
+</div>

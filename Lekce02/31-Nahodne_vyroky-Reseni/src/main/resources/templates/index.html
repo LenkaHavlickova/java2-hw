@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Výroky</title>
+</head>
+<body>
+
+    <div class="page">
+
+        <h1>Policejní vysvětlení</h1>
+
+        <p>
+            <span th:text="${vyrok}">Lorem ipsum dolor sit amet</span>
+        </p>
+
+    </div>
+</body>
+</html>

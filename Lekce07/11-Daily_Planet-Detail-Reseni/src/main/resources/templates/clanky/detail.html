@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../../static/css/styly.css"
+          th:href="${'../css/styly.css'}"/>
+    <link rel="icon" href="../../static/images/favicon.png"
+          th:href="${'../images/favicon.png'}"/>
+    <title>Daily Planet</title>
+</head>
+<body>
+    <!--/*@thymesVar id="clanek" type="cz.czechitas.webapp.DetailForm"*/-->
+
+    <div class="page">
+
+        <h1>Editace článku</h1>
+
+        <form method="post">
+            <table>
+                <tr>
+                    <td>Název</td>
+                    <td>
+                        <input name="nazev" value="Rajčata podražila"
+                               th:value="${clanek.nazev}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Autor</td>
+                    <td>
+                        <input name="autor" value="Steve Lombard"
+                               th:value="${clanek.autor}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Datum</td>
+                    <td>
+                        <input name="datum" type="date" value="2018-01-31"
+                               th:value="${#temporals.format(clanek.datum, 'yyyy-MM-dd')}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <a th:href="${'.'}" href="index.html" class="button">Zpět</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+
+    </div>
+</body>
+</html>

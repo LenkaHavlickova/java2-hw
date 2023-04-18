@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Zadejte čísla</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Zadejte 2 čísla</h1>
+
+        <p>Program je sečte, odečte, vynásobí, vydělí, umocní a odmocní.</p>
+    
+        <form method="post">
+            <table>
+                <tr>
+                    <td>Číslo 1:</td>
+                    <td>
+                        <input name="cislo1" type="number"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Číslo 2:</td>
+                    <td>
+                        <input name="cislo2" type="number"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Přepočítat"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="'css/styly.css'"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="'images/favicon.png'"/>
+    <title>Detail kontaktu | Java 2</title>
+</head>
+<body>
+    <!--/*@thymesVar id="kontakt" type="cz.czechitas.webapp.Kontakt"*/-->
+
+    <div class="page">
+        <h1>Detail kontaktu</h1>
+
+        <form method="post">
+            <table>
+                <tr>
+                    <td><label for="jmeno">Jméno</label></td>
+                    <td>
+                        <span id="jmeno" th:text="${kontakt.jmeno}">Krteček</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="telCislo">Telefon</label></td>
+                    <td>
+                        <span id="telCislo" th:text="${kontakt.telefonniCislo}">+420603117788</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td>
+                        <span id="email" th:text="${kontakt.email}">krtecek@hromadka.cz</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <a href="index.html" th:href="'.'" class="button">Zpět</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+</body>
+</html>

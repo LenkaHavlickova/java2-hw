@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../../static/css/styly.css"
+          th:href="${'../css/styly.css'}"/>
+    <link rel="icon" href="../../static/images/favicon.png"
+          th:href="${'../images/favicon.png'}"/>
+    <title>Daily Planet</title>
+</head>
+<body>
+    <!--/*@thymesVar id="seznam" type="java.util.List<cz.czechitas.webapp.Clanek>"*/-->
+
+    <div class="page">
+
+        <h1>Seznam novinových článků</h1>
+
+        <table>
+            <tr>
+                <td>Číslo</td>
+                <td>Název</td>
+                <td>Autor</td>
+                <td>Datum</td>
+                <td>Akce</td>
+            </tr>
+            <tr th:each="clanek : ${seznam}">
+                <td th:text="${clanek.id}">1000</td>
+                <td th:text="${clanek.nazev}">Výpadky elektřiny kvůli počasí</td>
+                <td th:text="${clanek.autor}">Clark Kent</td>
+                <td th:text="${#temporals.format(clanek.datum, 'd. M. yyyy')}">12. 4. 2018</td>
+                <td>
+                    <a th:href="${clanek.id + '.html'}"
+                       href="detail.html" class="button">Detail</a>
+                </td>
+            </tr>
+            <tr th:remove="all">
+                <td>1001</td>
+                <td>Řidič naboural do policejního auta</td>
+                <td>Loise Lane</td>
+                <td>11. 4. 2018</td>
+                <td>
+                    <a href="detail.html" class="button">Detail</a>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>

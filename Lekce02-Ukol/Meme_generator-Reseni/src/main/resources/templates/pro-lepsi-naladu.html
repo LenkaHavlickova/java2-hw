@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="cs" xml:lang="cs">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Pro lepší náladu</title>
+    <link rel="stylesheet" type="text/css"
+          href="../static/css/notepad.css"
+          th:href="@{/css/notepad.css}">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+</head>
+<body>
+
+    <div class="notepad">
+
+
+        <div class="alafoto">
+            <img src="../static/images/15.jpg"
+                 th:src="@{|/images/${obrazek1}|}"
+                 alt="vtipný obrázek" width="250px"/>
+        </div>
+        <img src="../static/images/tape.png"
+             th:src="@{/images/tape.png}"
+             alt="lepící páska" width="350px" id="paska1"/>
+
+        <div class="alafoto2">
+            <img src="../static/images/16.jpg"
+                 th:src="@{|/images/${obrazek2}|}"
+                 alt="vtipný obrázek" width="250px"/>
+        </div>
+        <img src="../static/images/tape.png"
+             th:src="@{/images/tape.png}"
+             alt="lepící páska" width="350px" id="paska2"/>
+
+
+        <div class="druhaStrana">
+            <h2>Omlouvám se že jdu pozdě ale....</h2>
+
+            <p th:text="${vyrok1}">Moje sousedka vařila svíčkovou a já měl zrovna v lednici brusinky. Znamení.</p>
+            <p th:text="${vyrok2}">Po cestě do práce jsem četla plakát „Dělejte to, co chcete“, a tak jsem šla nakupovat.</p>
+            <p th:text="${vyrok3}">V televizi říkali, že je teďka hodně ta ptačí chřipka, proto jsem musela utěšovat svýho papouška.</p>
+
+        </div>
+    </div>
+</body>
+</html>

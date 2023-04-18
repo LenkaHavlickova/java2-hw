@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="${'css/styly.css'}"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Husy a králíci</title>
+</head>
+<body>
+    <div class="page">
+
+        <h1>Husy a králíci</h1>
+
+        <p>Zadejte, kolik je na farmě hus a králíků a aplikace vypočítá, kolik je to celkově hlav a nohou.</p>
+
+        <form method="post">
+            <div>
+                <label for="husy">Počet hus:</label>
+                <input id="husy" type="text" name="pocetHus" th:value="${formular.pocetHus}"/>
+            </div>
+
+            <div>
+                <label for="kralici">Počet králíků:</label>
+                <input id="kralici" type="text" name="pocetKraliku" th:value="${formular.pocetKraliku}"/>
+            </div>
+
+            <input type="submit" value="Přepočítat"/>
+        </form>
+
+    </div>
+</body>
+</html>

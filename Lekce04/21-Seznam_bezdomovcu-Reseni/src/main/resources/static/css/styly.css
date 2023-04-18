@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.item {
+    width: 300px;
+    margin: 20px auto;
+    border: 3px solid black;
+
+}
+
+.item img {
+    width: 100%;
+    padding: 5px;
+    display: block;
+}
+
+
+.radiobuttons {
+    padding: 10px;
+    text-align: center;
+}
+
+.radiobuttons input {
+    margin-left: 20px;
+}
+
+.submit {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.submit input {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*postup stylovani:
+stylovani zacinam se tremi polozkami, abych dobre videla okraje, obtekani apod.
+0)
+* {
+    box-sizing: border-box;
+}
+
+1)nadpis na střed, mezera pod nadpisem
+h1 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+1)
+.item {
+    background: yellow;
+    width: 300px;
+}
+velikost obrazku presahuje kontejner
+rekneme obrazku - mej sirku 100% kontejneru
+2)
+.item img {
+    width: 100%;
+}
+
+3) zarovnat na střed stránky
+.item {
+    background: yellow;
+    width: 300px;
+    margin: 20px auto;
+}
+
+- využiju margin: auto, každému celku obrázek + tlačíka nastavím mezeru nahoře a dole 20px. Všimněte si, že mezera mezi dvěma celky je pouze 20 px, i když by "správně" měla být 40 px (20 px spodní okraj jednoho  + 20 px horní okraj dalšího). Může za to margin collapse, což je jev, který se u některých prvků uplatňuje a u některých zase ne. Pravidla k dohledání např. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">zde</a>. Pro naše potřeby asi stačí vědět, že něco takového existuje - když budete mít někde okraje dvakrát menší, než jste chtěli, tak budete mít aspoň tušení, kde by mohl být problém a příslušný okraj si promptně napíšete větší. :)
+
+4) vycentruju radiobuttony pod obrázkem a udělám jim trochu místa. Dočasně obarvím pro potřeby stylování.
+.radiobuttons {
+    background: sandybrown;
+    padding: 10px;
+    text-align: center;
+}
+
+5) odsadím od sebe buttony
+.item input[type=radio] {
+    margin-left: 20px;
+}
+
+6) mezi obrázkem a divem s radiobuttony je malinká mezera. Odstraním ji.
+.item img {
+    width: 100%;
+    display: block;
+}
+
+7) zarámuju každý set obrázek + buttony
+.item {
+    width: 300px;
+    margin: 20px auto;
+    border: 3px solid black;
+}
+
+7) vedena snahou o odlehčení, odsadím obrázek od rámečku
+.item img {
+    width: 100%;
+    padding: 5px;
+    display: block;
+}
+
+
+8) odstraním pomocné barvy pozadí
+
+9) submit button
+.submit {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+
+- roztáhnu tlačítko přes celou šírku divu
+
+.submit input {
+    width: 100%;
+}
+
+9)na konec doplnit th věci
+
+
+10) všechny radiobuttony mají name="answer" -> jde zapnout vždy jen jeden ze všech na stránce. Potřebujeme, aby šel zapnout vždy jeden ze dvou u každého obrázku. Tj. musíme zařídit name="answer2", answer3, atd. Použijeme vlastnost "count", která označuje, kolikátý objekt prošel skrze th:each
+
+https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#keeping-iteration-status
+The current iteration index, starting with 1. This is the count property.
+
+
+
+
+
+
+
+
+
+ */

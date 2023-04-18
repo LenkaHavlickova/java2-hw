@@ -1,0 +1,57 @@
+Zavislost na casti Spring Frameworku pro JDBC
+---------------------------------------------
+Do pom.xml do elementu <properties> vlozte tyto zaznamy:
+
+        <spring.version>5.2.3.RELEASE</spring.version>
+        <mariadb-java-client.version>2.5.4</mariadb-java-client.version>
+
+Dale do pom.xml do elementu <dependencies> vlozte tyto zavislosti:
+    
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mariadb.jdbc</groupId>
+            <artifactId>mariadb-java-client</artifactId>
+            <version>${mariadb-java-client.version}</version>
+        </dependency>
+
+
+
+Dotazy na vyzkouseni databaze
+-----------------------------
+SELECT count(*) FROM Customers
+SELECT Firstname FROM Customers WHERE ID=22
+SELECT ID, Firstname, Lastname, Address, Deleted, Version FROM Customers WHERE ID=22
+SELECT ID, Firstname, Lastname, Address, Deleted, Version FROM Customers
+INSERT INTO Customers (Firstname, Lastname, Address, Version) VALUES ("Jack", "Sparrow", "Port Royale", 0)
+UPDATE Customers SET Firstname = "Jack", Lastname = "Sparrow", Address = "Black Pearl", Version = Version + 1 WHERE id = 22 AND Version = 0
+UPDATE Customers SET Deleted = TRUE, Version = Version + 1 WHERE id = 22 AND Version = 1
+
+
+
+INSERT, UPDATE a DELETE pomoci JdbcTemplate
+-------------------------------------------
+1. SQL UPDATE ma primo stejne pojmenovanou metodu v JdbcTemplate. Tedy jdbcTemplate.update(). Nezapomente pouzit parametry s ?
+
+2. Pro SQL DELETE se pouziva take metoda jdbcTemplate.update().
+V nasem pripade je tu jeste zvlastnost, ze my zaznamy v databazi nemazeme, ale pouze vyvolame update tak, ze nastavime vlastnost deleted = TRUE. 
+
+3. Pro INSERT nema trida JdbcTemplate zrovna uzivatelsky prijemne vytvorenu metodu, ktera by umela pridat zaznam do databaze a zaroven vratit vygenerovany primarni klic (ID). Proto se na to pouzije metoda jdbcTemplate.update(preparedStatementCreator, keyHolder), se kterou se pracuje ponekud pracne.
+Zde je tedy listing: 
+
+        GeneratedKeyHolder drzakNaVygenerovanyKlic = new GeneratedKeyHolder();
+        String sql = "INSERT INTO customers (Firstname, Lastname, Address, Version) " +
+                "VALUES (?, ?, ?, ?)";
+        odesilacDotazu.update((Connection con) -> {
+                    PreparedStatement prikaz = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+                    prikaz.setString(1, zakaznik.getFirstName());
+                    prikaz.setString(2, zakaznik.getLastName());
+                    prikaz.setString(3, zakaznik.getAddress());
+                    prikaz.setInt(4, zakaznik.getVersion());
+                    return prikaz;
+                },
+                drzakNaVygenerovanyKlic);
+        zakaznik.setId(drzakNaVygenerovanyKlic.getKey().longValue());

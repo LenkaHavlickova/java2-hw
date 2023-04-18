@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet"
+          href="../static/css/styles.css"
+          th:href="${'css/styles.css'}"/>
+    <link rel="icon"
+          href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Pexeso</title>
+</head>
+<body>
+    <!--/*@thymesVar id="prebornici" type="java.util.List<cz.czechitas.webapp.Hrac>"*/-->
+
+    <h1>Největší přeborníci pexesa</h1>
+
+    <table class="hraci">
+        <tr>
+            <th>Jméno</th>
+            <th>Příjmení</th>
+            <th>Počet vyhraných trunajů</th>
+            <th>Počet turnajů celkem</th>
+            <th>Procento úspěšnosti</th>
+        </tr>
+        <tr th:each="prebornik : ${prebornici}">
+            <td th:text="${prebornik.jmeno}">Jára Cimrman</td>
+            <td th:text="${prebornik.prijmeni}">jara@cimrman.cz</td>
+            <td th:text="${prebornik.pocetVyhranychTurnaju}">998</td>
+            <td th:text="${prebornik.pocetTurnajuCelkem}">999</td>
+            <td th:text="${prebornik.uspesnost + ' %'}">100 %</td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+GET /VideoBoss/customers/all.html
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Cookie: Idea-69cecb57=11ce4aab-d4dc-4b87-b68e-835badb8857a
+Upgrade-Insecure-Requests: 1
+
+
+
+
+
+HTTP/1.1 200
+Content-Type: text/html;charset=UTF-8
+Content-Language: en-US
+Transfer-Encoding: chunked
+Date: Thu, 25 Apr 2019 17:01:22 GMT
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>VideoBoss</title>
+    <link rel="stylesheet" type="text/css"
+          href="/VideoBoss/css/style.css"/>
+</head>
+<body>
+
+
+    <h1>Customers</h1>
+
+    <h4>
+        <a href="/VideoBoss/customers/new.html"
+           class="actionButtonLink">
+            Add a customer
+        </a>
+    </h4>
+
+    <table>
+        <tr>
+            <th>Number</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Address</th>
+            <th>Action</th>
+        </tr>
+
+        <tr>
+            <td>101</td>
+            <td>Charles</td>
+            <td>Dickens</td>
+            <td>London</td>
+            <td>
+                <a href="/VideoBoss/customers/101.html"
+                   class="actionButtonLink">Edit</a>
+
+                <form action="/VideoBoss/customers/101/0"
+                      method="post"
+                      class="actionButtonForm">
+                    <input type="hidden" name="_method" value="delete"/>
+                    <input type="submit" value="Remove"/>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>102</td>
+            <td>Mark</td>
+            <td>Twain</td>
+            <td>Missouri</td>
+            <td>
+                <a href="/VideoBoss/customers/102.html"
+                   class="actionButtonLink">Edit</a>
+
+                <form action="/VideoBoss/customers/102/0"
+                      method="post"
+                      class="actionButtonForm">
+                    <input type="hidden" name="_method" value="delete"/>
+                    <input type="submit" value="Remove"/>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>103</td>
+            <td>Victor</td>
+            <td>Hugo</td>
+            <td>Paris</td>
+            <td>
+                <a href="/VideoBoss/customers/103.html"
+                   class="actionButtonLink">Edit</a>
+
+                <form action="/VideoBoss/customers/103/0"
+                      method="post"
+                      class="actionButtonForm">
+                    <input type="hidden" name="_method" value="delete"/>
+                    <input type="submit" value="Remove"/>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>104</td>
+            <td>Jára</td>
+            <td>Cimrman</td>
+            <td>Liptákov</td>
+            <td>
+                <a href="/VideoBoss/customers/104.html"
+                   class="actionButtonLink">Edit</a>
+
+                <form action="/VideoBoss/customers/104/0"
+                      method="post"
+                      class="actionButtonForm">
+                    <input type="hidden" name="_method" value="delete"/>
+                    <input type="submit" value="Remove"/>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>105</td>
+            <td>Bertold</td>
+            <td>Brecht</td>
+            <td>Berlin</td>
+            <td>
+                <a href="/VideoBoss/customers/105.html"
+                   class="actionButtonLink">Edit</a>
+
+                <form action="/VideoBoss/customers/105/0"
+                      method="post"
+                      class="actionButtonForm">
+                    <input type="hidden" name="_method" value="delete"/>
+                    <input type="submit" value="Remove"/>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>106</td>
+            <td>Umberto</td>
+            <td>Eco</td>
+            <td>Piedmont</td>
+            <td>
+                <a href="/VideoBoss/customers/106.html"
+                   class="actionButtonLink">Edit</a>
+
+                <form action="/VideoBoss/customers/106/0"
+                      method="post"
+                      class="actionButtonForm">
+                    <input type="hidden" name="_method" value="delete"/>
+                    <input type="submit" value="Remove"/>
+                </form>
+            </td>
+        </tr>
+
+        <tr>
+            <td>107</td>
+            <td>Franz</td>
+            <td>Kafka</td>
+            <td>Praha</td>
+            <td>
+                <a href="/VideoBoss/customers/107.html"
+                   class="actionButtonLink">Edit</a>
+
+                <form action="/VideoBoss/customers/107/0"
+                      method="post"
+                      class="actionButtonForm">
+                    <input type="hidden" name="_method" value="delete"/>
+                    <input type="submit" value="Remove"/>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet"
+          href="../static/css/styles.css"
+          th:href="${'css/styles.css'}"/>
+    <link rel="icon"
+          href="../static/images/favicon.png"
+          th:href="${'images/favicon.png'}"/>
+    <title>Pexeso</title>
+</head>
+<body>
+    <!--/*@thymesVar id="karty" type="java.util.List<java.lang.String>"*/-->
+
+    <h1>Pexeso</h1>
+
+    <div class="pexeso">
+       
+        <th:block th:each="karta : ${karty}">
+            <img th:src="${'images/' + karta + '.jpg'}" src="../static/images/karta1.jpg"/>
+        </th:block>
+        <!--/*-->
+        <img src="../static/images/karta1.jpg"/>
+        <img src="../static/images/karta2.jpg"/>
+        <img src="../static/images/karta2.jpg"/>
+
+        <img src="../static/images/karta3.jpg"/>
+        <img src="../static/images/karta3.jpg"/>
+        <img src="../static/images/karta4.jpg"/>
+        <img src="../static/images/karta4.jpg"/>
+
+        <img src="../static/images/karta5.jpg"/>
+        <img src="../static/images/karta5.jpg"/>
+        <img src="../static/images/karta6.jpg"/>
+        <img src="../static/images/karta6.jpg"/>
+
+        <img src="../static/images/karta7.jpg"/>
+        <img src="../static/images/karta7.jpg"/>
+        <img src="../static/images/karta8.jpg"/>
+        <img src="../static/images/karta8.jpg"/>
+        <!--*/-->
+    </div>
+
+</body>
+</html>

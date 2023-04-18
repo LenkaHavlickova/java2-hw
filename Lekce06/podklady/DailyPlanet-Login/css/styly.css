@@ -1,0 +1,122 @@
+@font-face { font-family: Josefin Sans; src: url('../fonts/JosefinSans-Regular.ttf'); }
+@font-face { font-family: Poiret One; src: url('../fonts/PoiretOne-Regular.ttf'); }
+@font-face { font-family: Raleway Dots; src: url('../fonts/RalewayDots-Regular.ttf'); }
+
+/* FONTS COPYRIGHTS
+Josefin Sans: Copyright (c) 2010, Santiago Orozco (hi@typemade.mx)
+
+Poiret One: Copyright (c) 2011, Denis Masharov (denis.masharov@gmail.com)
+
+Raleway Dots: Copyright (c) 2010, Matt McInerney (matt@pixelspread.com), Copyright (c) 2012,
+Pablo Impallari (www.impallari.com|impallari@gmail.com), Copyright (c) 2012, Brenda Gallo.
+(gbrenda1987@gmail.com), Copyright (c) 2012, Rodrigo Fuenzalida (www.rfuenzalida.com|hello@rfuenzalida.com),
+with Reserved Font Name "Raleway"
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL */
+
+
+body {
+    margin: 0;
+    padding: 0%;
+    background-image: url("../images/background.png");
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.2em;
+}
+h2, h3, h4, h5, h6 {
+    font-family: 'Poiret One', cursive;
+    font-weight: normal;
+    padding: 0;
+    margin: 0.5em 0;
+}
+h1 {
+    font-family: 'Raleway Dots', cursive;
+    font-weight: 200;
+    font-size: 4em;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+h2 {
+    font-size: 2.5em;
+    color: #000053;
+    text-align: center;
+    margin: 0.5em 0;
+}
+h3 {
+    font-size: 2.3em;
+    color: #7cae31;
+}
+h4 {
+    font-size: 2em;
+    color: #650065;
+}
+h5 {
+    font-size: 1.8em;
+    color: #ff8625;
+}
+h6 {
+    font-size: 1.6em;
+    color: #ff0088;
+}
+a {
+    text-decoration: none;
+    color: crimson;
+    font-weight: bolder;
+}
+a:hover {
+    color: navy;
+    font-weight: bolder;
+}
+table {
+    border-collapse: collapse;
+}
+td {
+    border: 1px solid silver;
+    padding: 0.25em;
+}
+
+ul {
+
+}
+
+li {
+    list-style-image: url("../images/beans.png");
+}
+.page {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.button {
+    display: inline-block;
+    background: #7e7ec2;
+    background-image: -webkit-linear-gradient(top, #7e7ec2, #000053);
+    background-image: -moz-linear-gradient(top, #7e7ec2, #000053);
+    background-image: -ms-linear-gradient(top, #7e7ec2, #000053);
+    background-image: -o-linear-gradient(top, #7e7ec2, #000053);
+    background-image: linear-gradient(to bottom, #7e7ec2, #000053);
+    border-radius: 3px;
+    color: #f5f5f5;
+    padding: 0.25em 1em;
+    margin: 0.25em;
+    text-align: center;
+    text-decoration: none;
+}
+
+/**************** MOBILE ****************/
+
+@media (max-width: 1100px) {
+    .page { width: 95%;}
+    h1 { font-size: 3.5em; }
+    h2 { font-size: 2em; }
+    h3 { font-size: 1.8em; }
+    h4 { font-size: 1.6em; }
+    h5 { font-size: 1.4em; }
+    h6 { font-size: 1.2em; }
+}

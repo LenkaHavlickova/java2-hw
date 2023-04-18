@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="../static/css/styly.css"
+          th:href="'css/styly.css'"/>
+    <link rel="icon" href="../static/images/favicon.png"
+          th:href="'images/favicon.png'"/>
+    <title>Seznam kontaktů | Java 2</title>
+</head>
+<body>
+    <!--/*@thymesVar id="seznamKontaktu" type="java.util.List<cz.czechitas.webapp.Kontakt>"*/-->
+
+    <div class="page">
+
+        <h1>Seznam kontaktů</h1>
+
+        <table>
+            <tr>
+                <th>Číslo</th>
+                <th>Název</th>
+                <th>Autor</th>
+                <th>Akce</th>
+            </tr>
+            <tr th:each="jedenKontakt : ${seznamKontaktu}">
+                <td th:text="${jedenKontakt.id}">Číslo</td>
+                <td th:text="${jedenKontakt.jmeno}">Jméno</td>
+                <td th:text="${jedenKontakt.telefonniCislo}">Telefon</td>
+                <td th:text="${jedenKontakt.email}">Email</td>
+                <td><a href="detail.html" th:href="${jedenKontakt.id} + '.html'" class="button">Edit</a>
+                    <form th:action="${jedenKontakt.id}" method="post">
+                        <input type="hidden" name="_method" value="DELETE"/>
+                        <input type="submit" value="Smazat" class="button"/>
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+        <a th:href="'new.html'" href="detail.html" class="button">Přidat nový kontakt</a>
+
+    </div>
+</body>
+</html>
